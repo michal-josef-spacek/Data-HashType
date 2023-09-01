@@ -24,7 +24,9 @@ sub BUILD {
 	my $self = shift;
 
 	# Check active.
-	check_required($self, 'active');
+	if (! defined $self->{'active'}) {
+		$self->{'active'} = 1;
+	}
 	check_bool($self, 'active');
 
 	# Check id.
