@@ -117,6 +117,17 @@ Get hash type name.
 
 Returns string.
 
+=head1 ERRORS
+
+ new():
+         Parameter 'active' must be a bool (0/1).
+                 Value: %s
+         Parameter 'id' must be a number.
+                 Value: %s
+         Parameter 'name' has length greater than '50'.
+                 Value: %s
+         Parameter 'name' is required.
+
 =head1 EXAMPLE
 
 =for comment filename=create_and_print_hash_type.pl

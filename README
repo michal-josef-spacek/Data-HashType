@@ -53,6 +53,16 @@ METHODS
 
     Returns string.
 
+ERRORS
+     new():
+             Parameter 'active' must be a bool (0/1).
+                     Value: %s
+             Parameter 'id' must be a number.
+                     Value: %s
+             Parameter 'name' has length greater than '50'.
+                     Value: %s
+             Parameter 'name' is required.
+
 EXAMPLE
      use strict;
      use warnings;
