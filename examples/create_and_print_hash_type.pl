@@ -8,7 +8,7 @@ use Data::HashType;
 my $obj = Data::HashType->new(
         'active' => 1,
         'id' => 10,
-        'name' => 'SHA256',
+        'name' => 'SHA-256',
 );
 
 # Print out.
@@ -17,6 +17,6 @@ print 'Active: '.$obj->active."\n";
 print 'Id: '.$obj->id."\n";
 
 # Output:
-# Name: SHA256
+# Name: SHA-256
 # Active: 1
 # Id: 10
