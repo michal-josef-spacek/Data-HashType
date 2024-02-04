@@ -73,7 +73,7 @@ Constructor.
 =item * C<active>
 
 Flag for activity of hash type.
-Possible valuea are 0/1.
+Possible value is 0/1.
 Default value is 1 (active).
 
 =item * C<id>
