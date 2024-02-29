@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils qw(check_bool check_length check_number check_required);
+use Mo::utils 0.09 qw(check_bool check_length check_number check_required);
 
 our $VERSION = 0.03;
 

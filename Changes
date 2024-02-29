@@ -1,6 +1,7 @@
 0.03
  - Fix typo in doc.
  - Update copyright years.
+ - Update minimal version of Mo::utils to 0.09.
 
 0.02 2023-09-01T14:12:51+02:00
  - Add ERRORS section to doc.
