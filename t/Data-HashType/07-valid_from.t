@@ -3,7 +3,7 @@ use warnings;
 
 use Data::HashType;
 use DateTime;
-use Test::More 'tests' => 2;
+use Test::More 'tests' => 3;
 use Test::NoWarnings;
 
 # Test.
@@ -15,4 +15,5 @@ my $obj = Data::HashType->new(
 		'day' => 1,
 	),
 );
-is($obj->name, 'SHA1', 'Get name (SHA1).');
+isa_ok($obj->valid_from, 'DateTime');
+is($obj->valid_from->ymd, '2024-01-01', 'Get valid from in ymd format (2024-01-01).');

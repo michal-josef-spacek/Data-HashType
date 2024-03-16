@@ -25,5 +25,7 @@ t/Data-HashType/03-new.t
 t/Data-HashType/04-active.t
 t/Data-HashType/05-id.t
 t/Data-HashType/06-name.t
+t/Data-HashType/07-valid_from.t
+t/Data-HashType/08-valid_to.t
 xt/Data-HashType/01-pod_coverage.t
 xt/Data-HashType/02-pod.t
