@@ -86,6 +86,16 @@ Data::HashType - Data object for hash type.
  my $valid_from = $obj->valid_from;
  my $valid_to = $obj->valid_to;
 
+=head1 DESCRIPTION
+
+The intention of this module is to store information about the usage of digests.
+Digests are active only within a certain time range, and we need a mechanism to
+transition to others.
+
+A real-world example is a database table that follows the same format as this data object,
+with multiple records being valid at different times, while other database tables
+have relations to this table.
+
 =head1 METHODS
 
 =head2 C<new>
