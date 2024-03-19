@@ -1,4 +1,4 @@
-0.04
+0.04 2024-03-19T13:12:38+01:00
  - API CHANGE: Add 'valid_from' and 'valid_to' parameters. 'active'
    parameter will be removed in future. And 'valid_from' will be required
    in future.
