@@ -6,12 +6,11 @@ use DateTime;
 use English;
 use Error::Pure::Utils qw(clean);
 use Test::MockObject;
-use Test::More 'tests' => 12;
+use Test::More 'tests' => 11;
 use Test::NoWarnings;
 
 # Test.
 my $obj = Data::HashType->new(
-	'active' => 1,
 	'name' => 'SHA1',
 	'valid_from' => DateTime->new(
 		'year' => 2024,
@@ -24,7 +23,6 @@ isa_ok($obj, 'Data::HashType');
 # Test.
 eval {
 	Data::HashType->new(
-		'active' => 1,
 		'valid_from' => DateTime->new(
 			'year' => 2024,
 			'month' => 1,
@@ -49,22 +47,6 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'name' has length greater than '50'.\n",
 	"Parameter 'name' has length greater than '50'.");
-clean();
-
-# Test.
-eval {
-	Data::HashType->new(
-		'active' => 'bad',
-		'name' => 'SHA1',
-		'valid_from' => DateTime->new(
-			'year' => 2024,
-			'month' => 1,
-			'day' => 1,
-		),
-	);
-};
-is($EVAL_ERROR, "Parameter 'active' must be a bool (0/1).\n",
-	"Parameter 'active' must be a bool (0/1).");
 clean();
 
 # Test.

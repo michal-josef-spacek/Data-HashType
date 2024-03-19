@@ -5,13 +5,9 @@ use warnings;
 
 use Error::Pure qw(err);
 use Mo qw(build is);
-use Mo::utils 0.09 qw(check_bool check_isa check_length check_number check_required);
+use Mo::utils 0.09 qw(check_isa check_length check_number check_required);
 
 our $VERSION = 0.05;
-
-has active => (
-	is => 'ro',
-);
 
 has id => (
 	is => 'ro',
@@ -31,12 +27,6 @@ has valid_to => (
 
 sub BUILD {
 	my $self = shift;
-
-	# Check active.
-	if (! defined $self->{'active'}) {
-		$self->{'active'} = 1;
-	}
-	check_bool($self, 'active');
 
 	# Check id.
 	check_number($self, 'id');
@@ -80,7 +70,6 @@ Data::HashType - Data object for hash type.
  use Data::HashType;
 
  my $obj = Data::HashType->new(%params);
- my $active = $obj->active; # deprecated
  my $id = $obj->id;
  my $name = $obj->name;
  my $valid_from = $obj->valid_from;
@@ -105,14 +94,6 @@ have relations to this table.
 Constructor.
 
 =over 8
-
-=item * C<active>
-
-B<Parameter 'active' will be removed. Use the C<valid_from/valid_to> parameter instead.>
-
-Flag for activity of hash type.
-Possible value is 0/1.
-Default value is 1 (active).
 
 =item * C<id>
 
@@ -142,16 +123,6 @@ It's optional.
 =back
 
 Returns instance of object.
-
-=head2 C<active>
-
-B<Method 'active' will be removed. Use the L<valid_from>/L<valid_to> parameter instead.>
-
- my $active = $obj->active;
-
-Get active flag.
-
-Returns 0/1.
 
 =head2 C<id>
 
@@ -189,8 +160,6 @@ Returns L<DateTime> object or undef.
 
  new():
          From Mo::utils:
-                 Parameter 'active' must be a bool (0/1).
-                         Value: %s
                  Parameter 'id' must be a number.
                          Value: %s
                  Parameter 'name' has length greater than '50'.
