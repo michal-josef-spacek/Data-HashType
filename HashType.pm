@@ -46,8 +46,7 @@ sub BUILD {
 	check_length($self, 'name', 50);
 
 	# Check valid_from.
-	# XXX Add required in future.
-	# check_required($self, 'valid_from');
+	check_required($self, 'valid_from');
 	check_isa($self, 'valid_from', 'DateTime');
 
 	# Check valid_to.
@@ -197,6 +196,7 @@ Returns L<DateTime> object or undef.
                  Parameter 'name' has length greater than '50'.
                          Value: %s
                  Parameter 'name' is required.
+                 Parameter 'valid_from' is required.
                  Parameter 'valid_from' must be a 'DateTime' object.
                          Value: %s
                          Reference: %s

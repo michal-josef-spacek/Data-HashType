@@ -1,8 +1,9 @@
 TODO
 ====
 1. Check error parameters in tests.
-2. Parameter 'valid_from' to be required in future.
 3.
 
 Applied
 =======
+2. Parameter 'valid_from' to be required in future.
+OK [20240319] skim

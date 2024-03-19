@@ -104,6 +104,7 @@ ERRORS
                      Parameter 'name' has length greater than '50'.
                              Value: %s
                      Parameter 'name' is required.
+                     Parameter 'valid_from' is required.
                      Parameter 'valid_from' must be a 'DateTime' object.
                              Value: %s
                              Reference: %s
