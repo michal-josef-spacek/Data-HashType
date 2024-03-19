@@ -46,7 +46,8 @@ sub BUILD {
 	check_length($self, 'name', 50);
 
 	# Check valid_from.
-	check_required($self, 'valid_from');
+	# XXX Add required in future.
+	# check_required($self, 'valid_from');
 	check_isa($self, 'valid_from', 'DateTime');
 
 	# Check valid_to.

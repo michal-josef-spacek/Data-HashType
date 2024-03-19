@@ -6,7 +6,7 @@ use DateTime;
 use English;
 use Error::Pure::Utils qw(clean);
 use Test::MockObject;
-use Test::More 'tests' => 12;
+use Test::More 'tests' => 11;
 use Test::NoWarnings;
 
 # Test.
@@ -83,15 +83,16 @@ is($EVAL_ERROR, "Parameter 'id' must be a number.\n",
 	"Parameter 'id' must be a number.");
 clean();
 
+# XXX valid_from will be required in future
 # Test.
-eval {
-	Data::HashType->new(
-		'name' => 'SHA1',
-	);
-};
-is($EVAL_ERROR, "Parameter 'valid_from' is required.\n",
-	"Parameter 'valid_from' is required.");
-clean();
+#eval {
+#	Data::HashType->new(
+#		'name' => 'SHA1',
+#	);
+#};
+#is($EVAL_ERROR, "Parameter 'valid_from' is required.\n",
+#	"Parameter 'valid_from' is required.");
+#clean();
 
 # Test.
 eval {
