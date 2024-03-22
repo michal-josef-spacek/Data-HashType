@@ -122,7 +122,7 @@ EXAMPLE
      # Valid from: 2024-01-01
 
 DEPENDENCIES
-    Error::Pure, Mo, Mo::utils.
+    DateTime, Error::Pure, Mo, Mo::utils.
 
 REPOSITORY
     <https://github.com/michal-josef-spacek/Data-HashType>

@@ -3,6 +3,7 @@ package Data::HashType;
 use strict;
 use warnings;
 
+use DateTime;
 use Error::Pure qw(err);
 use Mo qw(build is);
 use Mo::utils 0.09 qw(check_isa check_length check_number check_required);
@@ -208,6 +209,7 @@ Returns L<DateTime> object or undef.
 
 =head1 DEPENDENCIES
 
+L<DateTime>,
 L<Error::Pure>,
 L<Mo>,
 L<Mo::utils>.
