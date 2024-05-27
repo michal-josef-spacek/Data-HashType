@@ -78,7 +78,7 @@ METHODS
 ERRORS
      new():
              From Mo::utils:
-                     Parameter 'id' must be a number.
+                     Parameter 'id' must be a natural number.
                              Value: %s
                      Parameter 'name' has length greater than '50'.
                              Value: %s
