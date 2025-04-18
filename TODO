@@ -1,7 +1,8 @@
 TODO
 ====
 1. Check error parameters in tests.
-3.
+3. Move check for valid_to > valid_from to some common subroutine.
+4.
 
 Applied
 =======
