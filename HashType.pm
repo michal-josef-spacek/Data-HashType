@@ -29,18 +29,18 @@ has valid_to => (
 sub BUILD {
 	my $self = shift;
 
-	# Check id.
+	# Check 'id'.
 	check_number_id($self, 'id');
 
-	# Check hash name.
+	# Check 'name'.
 	check_required($self, 'name');
 	check_length($self, 'name', 50);
 
-	# Check valid_from.
+	# Check 'valid_from'.
 	check_required($self, 'valid_from');
 	check_isa($self, 'valid_from', 'DateTime');
 
-	# Check valid_to.
+	# Check 'valid_to'.
 	check_isa($self, 'valid_to', 'DateTime');
 	if (defined $self->{'valid_to'}
 		&& DateTime->compare($self->{'valid_from'}, $self->{'valid_to'}) != -1) {
